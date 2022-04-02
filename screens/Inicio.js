@@ -27,9 +27,6 @@ export default function Inicio({ navigation }) {
                 </Text>
             </View>
             </ImageBackground>
-
-            
-
             
 
         </SafeAreaView>
