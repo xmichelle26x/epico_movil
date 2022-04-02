@@ -19,29 +19,15 @@ const CarouselCardItem = ({ item, index }) => {
 }
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'white',
-    borderRadius: 8,
+    backgroundColor: 'white', 
     width: ITEM_WIDTH,
-    padding: 2, 
-    elevation:6
+    borderRadius:7,
+    elevation:8
   },
   image: {
-    width: 287,
+    width: ITEM_WIDTH,
     height: 180,
-  },
-  header: {
-    color: "#222",
-    fontSize: 28,
-    fontWeight: "bold",
-    paddingLeft: 20,
-    paddingTop: 10
-  },
-  body: {
-    color: "#222",
-    fontSize: 15,
-    paddingLeft: 20,
-    paddingLeft: 20,
-    paddingRight: 20
+    borderRadius:6, 
   }
 })
 

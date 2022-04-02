@@ -14,7 +14,7 @@ const CarouselCards = () => {
     <View>
       <Carousel
         layout="tinder"
-        layoutCardOffset={9}
+        layoutCardOffset={2}
         ref={isCarousel}
         data={data}
         renderItem={CarouselCardItem}
@@ -34,7 +34,7 @@ const CarouselCards = () => {
           marginHorizontal: 0,
           backgroundColor: 'rgba(0, 0, 0, 0.92)'
         }}
-        inactiveDotOpacity={0.4} 
+        inactiveDotOpacity={0.2} 
         tappableDots={true}
       />
     </View>
