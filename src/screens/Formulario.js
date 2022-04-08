@@ -11,7 +11,7 @@ export default function Inicio({ navigation }) {
     return (
         <SafeAreaView style={styles.container}>
 
-            <ImageBackground source={require('../assets/background.png')}  style={styles.image}>
+            <ImageBackground source={require('/assets/background.png')}  style={styles.image}>
             
             </ImageBackground>
 

@@ -1,27 +1,38 @@
-// In App.js in a new project
-import 'react-native-gesture-handler'
-import * as React from 'react'; 
-import { NavigationContainer } from '@react-navigation/native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-// import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-// import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import React from 'react'
+import { Provider } from 'react-native-paper'
+import { NavigationContainer } from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack'
+import { theme } from './src/core/theme'
+import {
+  StartScreen,
+  LoginScreen,
+  RegisterScreen,
+  ResetPasswordScreen,
+  Dashboard,
+} from './src/screens'
 
-import Inicio from './screens/Inicio'
-import Formulario from './screens/Formulario'
-import Principal from './screens/Principal'
+const Stack = createStackNavigator()
 
-const Drawer = createDrawerNavigator();
-
-function App() {
+export default function App() {
   return (
-    <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Inicio">
-        <Drawer.Screen name="Inicio" component={Inicio} />
-        <Drawer.Screen name="Principal" component={Principal} />
-        <Drawer.Screen name="Formulario" component={Formulario} />
-      </Drawer.Navigator>
-    </NavigationContainer>
-  );
+    <Provider theme={theme}>
+      <NavigationContainer>
+        <Stack.Navigator
+          initialRouteName="StartScreen"
+          screenOptions={{
+            headerShown: false,
+          }}
+        >
+          <Stack.Screen name="StartScreen" component={StartScreen} />
+          <Stack.Screen name="LoginScreen" component={LoginScreen} />
+          <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
+          <Stack.Screen name="Dashboard" component={Dashboard} />
+          <Stack.Screen
+            name="ResetPasswordScreen"
+            component={ResetPasswordScreen}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </Provider>
+  )
 }
-
-export default App;
