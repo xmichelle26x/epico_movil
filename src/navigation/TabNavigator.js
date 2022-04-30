@@ -1,17 +1,28 @@
 import React from 'react'
+import * as Localization from 'expo-localization'
+import i18n from 'i18n-js'
+import { es, en } from '../i18n/supportedLanguages'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import Dashboard from '../screens/Dashboard'
+// import Dashboard from '../screens/Dashboard'
 import BecasDisponibles from '../screens/BecasDisponibles'
 import BecasInscritas from '../screens/BecasInscritas'
 import { Ionicons } from "@expo/vector-icons";
 import { theme } from '../core/theme';
+import {
+  Dashboard,
+  StartScreen
+} from '../screens'
 
+i18n.fallbacks = true
+i18n.translations = { es, en }
+i18n.locale = Localization.locale
 const Tab = createBottomTabNavigator()
 
 const TabNavigator = () => {
   return (
     <Tab.Navigator
-      initialRouteName="Dashboard"
+      initialRouteName="StartScreen"
+      component={StartScreen}
       screenOptions={{
         activeTintColor: "#000",
         tabBarActiveBackgroundColor: theme.colors.primary,
@@ -23,7 +34,7 @@ const TabNavigator = () => {
         name="Dashboard"
         component={Dashboard}
         options={{
-          title: "Bienvenido",
+          title: i18n.t('tabnavigator.home'),
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="ios-home" size={size} color={theme.colors.primary} />
           )
@@ -33,7 +44,7 @@ const TabNavigator = () => {
         name="BecasDisponibles"
         component={BecasDisponibles}
         options={{
-          title: "Becas Disponibles",
+          title: i18n.t('tabnavigator.available_scholarships'),
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="desktop-outline" size={size} color={color} />
           )
@@ -43,7 +54,7 @@ const TabNavigator = () => {
         name="BecasInscritas"
         component={BecasInscritas}
         options={{
-          title: "Becas Inscritas",
+          title: i18n.t('tabnavigator.enrolled_scholarships'),
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="school-outline" size={size} color={color} />
           )

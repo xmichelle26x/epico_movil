@@ -4,7 +4,7 @@ import { Text } from 'react-native-paper'
 import { theme } from '../core/theme'
 
 export default function Header(props) {
-  return <Text style={styles.header} {...props} />
+  return <Text style={styles.headerTitle} {...props} />
 }
 
 const styles = StyleSheet.create({
@@ -18,8 +18,7 @@ const styles = StyleSheet.create({
   },
   headerTitle: {
       color: theme.colors.secondary,
-      fontFamily: 'Dosis',
-      fontSize: 15,
+      fontSize: 18,
       fontWeight: 'bold',
   },
   headerTitleWrapper: {flex: 1,

@@ -10,7 +10,6 @@ import Paragraph from '../components/Paragraph'
 import { StyleSheet} from 'react-native'
 import { theme } from '../core/theme'
 
-
 export default function StartScreen({ navigation }) {
   return (
     <Background>
@@ -43,5 +42,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     color: theme.colors.primary,
+    textAlign: 'center',
   }
 })

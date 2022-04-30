@@ -61,11 +61,16 @@ const es = {
         back: "Back-End",
         ds: "Data Science",
         ai: "Inteligencia Artificial"
+    },
+    tabnavigator: {
+        home: "Home",
+        available_scholarships: "Available Scholarships",
+        enrolled_scholarships: "Enrolled Scholarships"
     }
 };
 const en = {
-    website_title: "Epic Scholarships",
-    mainpage_title: "Epic Scholarship Management System",
+    website_title: "EPICO Scholarships",
+    mainpage_title: "EPICO Scholarships Management System",
     nos_msg: "At ÉPICO we continue to develop more scholarship programs and initiatives to promote digital talent and provide new and better opportunities for Guayaquil residents. We want to continue contributing to building a digital Guayaquil.",
     contact_us: {
         title: "Contact us",
@@ -98,7 +103,7 @@ const en = {
         title: "Login",
         button: "Enter",
         register: "Register",
-        welcome: "Welcome to the Epic Scholarship Management System",
+        welcome: "Welcome to the EPICO Scholarship Management System",
         forgot_password: "Forgot your password?",
         no_account: "Don't have an account?",
         empty_email: "Email cannot be empty",
@@ -126,6 +131,11 @@ const en = {
         back: "Back-End",
         ds: "Data Science",
         ai: "Artificial Intelligence"
+    },
+    tabnavigator: {
+        home: "Inicio",
+        available_scholarships: "Becas Disponibles",
+        enrolled_scholarships: "Becas Inscritas"
     }
 };
 
